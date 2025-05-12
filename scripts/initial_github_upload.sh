@@ -67,6 +67,10 @@ echo -e "${GREEN}Adding remote repository...${NC}"
 git remote remove origin 2>/dev/null || true
 git remote add origin https://github.com/aigeezer/claude-project-agents.git
 
+# Set main as default branch
+echo -e "${GREEN}Setting default branch to main...${NC}"
+git branch -M main
+
 # Stage all files
 echo -e "${GREEN}Staging all files...${NC}"
 git add .
@@ -79,13 +83,11 @@ git commit -m "Initial commit: Claude Project Management Agent Pipeline - $commi
 # Push to GitHub
 echo -e "${GREEN}Pushing to GitHub...${NC}"
 echo -e "${YELLOW}You may be prompted for your GitHub credentials${NC}"
-git push -u origin main || git push -u origin master
+git push -u origin main
 
-# If push failed due to branch name, try creating main branch
 if [ $? -ne 0 ]; then
-    echo -e "${YELLOW}Initial push failed. Creating 'main' branch and retrying...${NC}"
-    git branch -M main
-    git push -u origin main
+    echo -e "${RED}Push failed. Please check your credentials and try again.${NC}"
+    exit 1
 fi
 
 echo -e "${GREEN}✅ Initial upload complete!${NC}"

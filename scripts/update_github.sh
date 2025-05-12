@@ -22,6 +22,16 @@ if [ ! -d .git ]; then
     exit 1
 fi
 
+# Get current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo -e "${BLUE}Current branch: $CURRENT_BRANCH${NC}"
+
+# Ensure we're on the main branch
+if [ "$CURRENT_BRANCH" != "main" ]; then
+    echo -e "${YELLOW}Switching to main branch...${NC}"
+    git checkout main || git checkout -b main
+fi
+
 # Check for changes
 echo -e "${BLUE}Checking for changes...${NC}"
 if [ -z "$(git status --porcelain)" ]; then
@@ -53,11 +63,11 @@ git commit -m "$commit_msg"
 
 # Pull latest changes first (to avoid conflicts)
 echo -e "${GREEN}Pulling latest changes from remote...${NC}"
-git pull origin main --rebase || git pull origin master --rebase
+git pull origin main --rebase
 
 # Push changes
 echo -e "${GREEN}Pushing changes to GitHub...${NC}"
-git push origin main || git push origin master
+git push origin main
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✅ Update successful!${NC}"

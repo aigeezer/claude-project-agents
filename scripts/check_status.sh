@@ -37,7 +37,8 @@ git status --short
 
 # Show unpushed commits
 echo -e "\n${GREEN}Unpushed commits:${NC}"
-git log origin/main..HEAD --oneline 2>/dev/null || git log origin/master..HEAD --oneline 2>/dev/null || echo "None"
+BRANCH=$(git branch --show-current)
+git log origin/$BRANCH..HEAD --oneline 2>/dev/null || echo "None"
 
 # Show recent commits
 echo -e "\n${GREEN}Recent commits:${NC}"
