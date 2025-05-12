@@ -95,13 +95,16 @@ claude-project-agents/
 │   ├── 2. TechnicalArchitectPrompt.md
 │   ├── 3. UIUXDesignerPrompt.md
 │   ├── 4. FrontendDeveloperPrompt.md
+│   ├── 4. FrontendDeveloperPrompt_v2.md  # Enhanced code-writing version
 │   ├── 5. BackendDeveloperPrompt.md
+│   ├── 5. BackendDeveloperPrompt_v2.md   # Enhanced code-writing version
 │   ├── 6. DevOpsEngineerPrompt.md
 │   ├── 7. QAEngineerPrompt.md
 │   ├── 8. SiteReliabilityEngineerPrompt.md
 │   ├── 9. ProductAnalystPrompt.md
 │   ├── 10. AgentSummary.md
-│   └── build-plan-template.md
+│   ├── build-plan-template.md
+│   └── SESSION_CONTINUITY_GUIDE.md     # Guide for handling chat limits
 ├── scripts/
 │   ├── setup_environment.sh      # Configuration script
 │   ├── reset_to_defaults.sh      # Reset script
@@ -113,7 +116,8 @@ claude-project-agents/
 ├── claude_desktop_config.json    # MCP configuration file
 ├── QUICK_START.md               # Quick start guide
 ├── README.md                    # This file
-└── README_GitHub_Scripts.md     # GitHub scripts documentation
+├── README_GitHub_Scripts.md     # GitHub scripts documentation
+└── CODE_IMPLEMENTATION_GUIDE.md  # Guide for actual code writing
 ```
 
 ## ⚙️ Configuration
@@ -173,6 +177,34 @@ All agents utilize MCP (Model Context Protocol) tools:
 - **Progressive Enhancement**: Each phase builds on previous work
 - **Comprehensive Coverage**: From initial concept to production analytics
 - **Flexibility**: Agents can be customized for specific project needs
+
+## 🔄 Session Continuity
+
+Claude has conversation limits, and complex coding tasks often require multiple sessions. The system includes:
+
+### Session State Management
+- **SESSION_STATE.md** - Tracks current progress within each agent's work
+- **IMPLEMENTATION_LOG.md** - Chronological record of all work completed
+- **HANDOFF.md** - Detailed instructions for continuing in a new session
+
+### Continuity Features
+- Frontend and Backend developers create session state files
+- Knowledge graph stores progress checkpoints
+- Clear handoff protocols between sessions
+- API contract system ensures frontend-backend alignment
+
+See `docs/SESSION_CONTINUITY_GUIDE.md` for complete details on handling session transitions.
+
+## 🔌 Enhanced Code Implementation
+
+The repository includes enhanced versions (v2) of the Frontend and Backend Developer prompts that:
+- Write actual code directly to the filesystem
+- Use the filesystem tool instead of artifacts
+- Create complete, working applications
+- Maintain session continuity across chat limits
+- Store progress in the knowledge graph
+
+Refer to `CODE_IMPLEMENTATION_GUIDE.md` for implementation details.
 
 ## 📝 Deliverables by Agent
 
