@@ -2,6 +2,8 @@
 
 This folder contains scripts to manage the GitHub repository for the Claude Project Agents.
 
+Note: All scripts have been moved to the `scripts/` directory.
+
 ## Scripts
 
 ### 1. initial_github_upload.sh
@@ -38,13 +40,15 @@ A helper script to make the other scripts executable.
 
 1. First, make the scripts executable:
    ```bash
+   cd scripts
    chmod +x make_executable.sh
    ./make_executable.sh
+   cd ..
    ```
 
 2. Run the initial upload:
    ```bash
-   ./initial_github_upload.sh
+   ./scripts/initial_github_upload.sh
    ```
 
 3. You'll be prompted for your GitHub credentials (username and personal access token)
@@ -54,7 +58,7 @@ A helper script to make the other scripts executable.
 After making changes to any files:
 
 ```bash
-./update_github.sh
+./scripts/update_github.sh
 ```
 
 You'll be prompted to enter a commit message. Press Enter to use the default message.
@@ -64,7 +68,7 @@ You'll be prompted to enter a commit message. Press Enter to use the default mes
 To see the current status of your repository:
 
 ```bash
-./check_status.sh
+./scripts/check_status.sh
 ```
 
 This will show you what changes are pending, recent commits, and other useful information.
@@ -93,6 +97,6 @@ https://github.com/aigeezer/claude-project-agents
 
 ## Troubleshooting
 
-- If you get permission errors, make sure you've run `make_executable.sh`
+- If you get permission errors, make sure you've run `scripts/make_executable.sh`
 - If authentication fails, ensure you're using a personal access token, not your password
 - If the push fails, check that you have write access to the repository

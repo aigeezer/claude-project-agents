@@ -56,6 +56,10 @@ node_modules/
 # Private or sensitive files
 private/
 secrets/
+
+# Configuration and backups
+.claude_config
+backups/
 EOL
 
 # Add remote repository
