@@ -9,7 +9,13 @@ git clone https://github.com/aigeezer/claude-project-agents.git
 cd claude-project-agents
 ```
 
-## Step 2: Run Setup
+## Step 2: Setup MCP Tools (Optional but Recommended)
+
+1. Copy `claude_desktop_config.json` to your Claude Desktop configuration directory
+2. Restart Claude Desktop to load the MCPs
+3. The agents will use these tools for enhanced functionality
+
+## Step 3: Run Environment Setup
 
 ```bash
 cd scripts
@@ -21,7 +27,7 @@ cd ..
 
 When prompted, enter your preferred base directory path (e.g., `/Users/yourname`).
 
-## Step 3: Start Your First Project
+## Step 4: Start Your First Project
 
 1. Open Claude in your browser
 2. Copy the content from `docs/1. ProjectManagerPrompt.md`
@@ -29,7 +35,7 @@ When prompted, enter your preferred base directory path (e.g., `/Users/yourname`
 4. Tell Claude about your project idea
 5. Follow the agent's instructions
 
-## Step 4: Continue Through the Pipeline
+## Step 5: Continue Through the Pipeline
 
 Each agent will:
 - Create documentation in your project folder

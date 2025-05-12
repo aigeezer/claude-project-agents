@@ -18,6 +18,32 @@ This pipeline consists of 9 specialized AI agents, each handling a specific phas
 
 Each agent creates specific deliverables that feed into the next phase, ensuring comprehensive documentation and seamless handoffs throughout the development lifecycle.
 
+## 🛠️ Required MCP Tools
+
+The AI agent prompts utilize several MCP (Model Context Protocol) tools. To use all features of the prompts, you'll need the following MCPs:
+
+### Core MCPs Used:
+- **Sequential Thinking** - For complex problem-solving and planning
+- **Web Search** - For researching best practices and current information
+- **Tavily** - For deep technical research and documentation
+- **Context7** - For accessing up-to-date library documentation
+- **Knowledge Graph** - For maintaining project continuity across agents
+- **Filesystem** - For reading and writing project files
+- **Google Drive** (optional) - For team collaboration and document sharing
+- **Fetch** - For analyzing competitor websites and documentation
+
+### MCP Resources:
+- **Configuration File**: A pre-configured `claude_desktop_config.json` is included in this repository
+- **MCP Directory**: [MCP Directory](https://github.com/modelcontextprotocol/directory) - Official directory of available MCPs
+- **MCP Documentation**: [MCP Docs](https://modelcontextprotocol.io/introduction) - Official documentation
+
+### Quick Setup:
+1. Download the included `claude_desktop_config.json`
+2. Place it in your Claude Desktop configuration directory
+3. Restart Claude Desktop to load the MCPs
+
+Note: Not all MCPs are required for basic functionality. The agents will work with available tools and notify you if a specific MCP is needed for a task.
+
 ## 🚀 Quick Start
 
 ### 1. Download the Repository
@@ -76,9 +102,12 @@ claude-project-agents/
 │   ├── initial_github_upload.sh  # Initial GitHub upload
 │   ├── update_github.sh          # GitHub updates
 │   ├── check_status.sh           # Repository status
+│   ├── fix_branch.sh             # Branch fix utility
 │   └── make_executable.sh        # Make scripts executable
+├── claude_desktop_config.json    # MCP configuration file
 ├── QUICK_START.md               # Quick start guide
-└── README.md                    # This file
+├── README.md                    # This file
+└── README_GitHub_Scripts.md     # GitHub scripts documentation
 ```
 
 ## ⚙️ Configuration

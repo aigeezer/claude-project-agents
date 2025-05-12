@@ -1,0 +1,61 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/tony/",
+        "/Users/tony/Ollama local/docs"
+      ],
+      "env": {
+        "PATH": "/opt/homebrew/opt/node@18/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"
+      }
+    },
+    "context7": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": ["-y", "@upstash/context7-mcp@latest"]
+    },
+    "memory": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "/Users/tony/memory.json"
+      }
+    },
+    "mcp-compass": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": [
+         "-y",
+         "@liuyoshio/mcp-compass"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "fetch": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "mcp/fetch"]
+    },
+    "tavily-mcp": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": ["-y", "tavily-mcp@latest"],
+      "env": {
+        "TAVILY_API_KEY": "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",
+        "PATH": "/opt/homebrew/opt/node@18/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin"
+      }
+    },
+    "puppeteer": {
+      "command": "/opt/homebrew/opt/node@18/bin/npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
+    }
+  },
+  "globalShortcut": "Ctrl+`"
+}
