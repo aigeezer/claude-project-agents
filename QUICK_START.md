@@ -1,5 +1,7 @@
 # 🚀 Quick Start Guide
 
+**Note: This guide is for Claude Desktop App users. The MCP tools will not work in the web-based version of Claude.**
+
 Welcome to the Claude Project Management Agent Pipeline! This guide will get you up and running in minutes.
 
 ## Step 1: Clone the Repository
@@ -11,7 +13,10 @@ cd claude-project-agents
 
 ## Step 2: Setup MCP Tools (Optional but Recommended)
 
-1. Copy `claude_desktop_config.json` to your Claude Desktop configuration directory
+1. Copy `claude_desktop_config.json` to your Claude Desktop configuration directory:
+   - **macOS**: `/Users/[yourname]/Library/Application Support/Claude/`
+   - **Windows**: `%APPDATA%\Claude\`
+   - **Linux**: `~/.config/claude/`
 2. Restart Claude Desktop to load the MCPs
 3. The agents will use these tools for enhanced functionality
 
@@ -29,7 +34,7 @@ When prompted, enter your preferred base directory path (e.g., `/Users/yourname`
 
 ## Step 4: Start Your First Project
 
-1. Open Claude in your browser
+1. Open Claude Desktop App (not the web version)
 2. Copy the content from `docs/1. ProjectManagerPrompt.md`
 3. Paste it into Claude
 4. Tell Claude about your project idea

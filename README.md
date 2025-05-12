@@ -1,5 +1,7 @@
 # Claude Project Management Agent Pipeline
 
+**Important: This pipeline is designed for the Claude Desktop App. The MCP tools will not work in the web-based version of Claude.**
+
 A comprehensive AI agent pipeline for end-to-end application development using Claude. This system provides structured prompts for 9 specialized AI agents that work together to take a project from initial concept through to production deployment and analytics.
 
 ## 🎯 Project Overview
@@ -34,12 +36,16 @@ The AI agent prompts utilize several MCP (Model Context Protocol) tools. To use 
 
 ### MCP Resources:
 - **Configuration File**: A pre-configured `claude_desktop_config.json` is included in this repository
-- **MCP Directory**: [MCP Directory](https://github.com/modelcontextprotocol/directory) - Official directory of available MCPs
+- **MCP Servers Directory**: [MCP Servers Repository](https://github.com/modelcontextprotocol/servers) - Collection of available MCP servers
+- **Awesome MCP Servers**: [Awesome MCP Servers](https://github.com/appcypher/awesome-mcp-servers) - Curated list of MCP servers
 - **MCP Documentation**: [MCP Docs](https://modelcontextprotocol.io/introduction) - Official documentation
 
 ### Quick Setup:
 1. Download the included `claude_desktop_config.json`
-2. Place it in your Claude Desktop configuration directory
+2. Place it in your Claude Desktop configuration directory:
+   - **macOS**: `/Users/[yourname]/Library/Application Support/Claude/`
+   - **Windows**: `%APPDATA%\Claude\`
+   - **Linux**: `~/.config/claude/`
 3. Restart Claude Desktop to load the MCPs
 
 Note: Not all MCPs are required for basic functionality. The agents will work with available tools and notify you if a specific MCP is needed for a task.
