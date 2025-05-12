@@ -1,0 +1,31 @@
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Log files
+*.log
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build files
+build/
+dist/
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Private or sensitive files
+private/
+secrets/
